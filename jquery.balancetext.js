@@ -69,10 +69,12 @@
 
     /**
      * Add whitespace after words in text to justify the string to
-     * the specified size.
+     * the specified size.  Element is required to measure the width 
+     * of the supplied text with styling applied.
      * 
-     * @param txt      - text string
-     * @param conWidth - container width
+     * @param $el        - $(element)
+     * @param txt        - text string
+     * @param conWidth   - container width
      */
     var justify = function ($el, txt, conWidth) {
         txt = $.trim(txt);
@@ -259,6 +261,7 @@
 
                 if (shouldJustify) {
                     $this.html(newText + justify($this, remainingText, containerWidth));
+                    $this.append('<span style="word-spacing: 10px;">&nbsp;</span>');
                 } else {
                     $this.html(newText + remainingText);
                 }

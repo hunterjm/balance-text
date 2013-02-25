@@ -51,7 +51,7 @@ form {
 .picContainer {
 	width: 360px;
 	margin: 0 auto;
-	text-align: justify;
+	text-align: center;
 	font-size: 80%;
 }
 .picContainer img {
